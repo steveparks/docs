@@ -322,11 +322,13 @@ You can combine literal and dynamic keys and get real fancy if you need to.
 
 ### Disambiguation {#disambiguating-variables}
 
-As your templates grow and increase in complexity, you _may_ find yourself unsure if you're working with a variable or a [Tag](#tags). You may optionally disambiguate your variables by prefixing them with a `$` dollar sign, just like PHP.
+As your templates grow and increase in complexity, you _may_ find yourself unsure if you're working with a variable or a [Tag](#tags). You may optionally disambiguate your variables by prefixing them with a `$` dollar sign, just like PHP. 
 
 ```
 {{ $content }}
 ```
+
+This includes variables that Statamic creates for you, such as the objects of your collections or taxonomies. For example, a taxonomy called 'Section' could be disambiguated from Statamic's own Section tag by referencing it as ```{{ $section }}```.
 
 ### Modifiers
 
